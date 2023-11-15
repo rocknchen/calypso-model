@@ -16,7 +16,7 @@ public abstract class AbstractTrade implements ITrade {
 
     @Override
     public String getId() {
-        return null;
+        return id;
     }
 
 }
