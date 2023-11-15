@@ -8,10 +8,10 @@ import static com.hthk.fintech.model.software.app.ApplicationEnum.CALYPSO;
 
 /**
  * @Author: Rock CHEN
- * @Date: 2023/11/14 19:38
+ * @Date: 2023/11/15 12:17
  */
 @DataCriteria(sourceName = CALYPSO, entityType = TRADE)
-public class CriteriaTrade
+public class DataCriteriaTrade
 
         extends AbstractTradeCriteria {
 
