@@ -5,4 +5,15 @@ package com.hthk.calypsox.model.trade;
  * @Date: 2023/11/15 11:52
  */
 public interface ITrade {
+
+    String getId();
+
+    default String getExternalReference() {
+        return "";
+    }
+
+    default String getInternalReference() {
+        return "";
+    }
+
 }
