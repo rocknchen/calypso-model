@@ -11,7 +11,7 @@ import static com.hthk.fintech.model.software.app.ApplicationEnum.CALYPSO;
  * @Date: 2023/11/14 19:38
  */
 @DataCriteria(sourceName = CALYPSO, entityType = TRADE)
-public class TradeCriteriaCalypso
+public class CriteriaTrade
 
         extends AbstractTradeCriteria {
 
