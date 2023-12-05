@@ -17,6 +17,16 @@ public class DataCriteriaTrade
 
     private String book;
 
+    private String currencyPair;
+
+    public String getCurrencyPair() {
+        return currencyPair;
+    }
+
+    public void setCurrencyPair(String currencyPair) {
+        this.currencyPair = currencyPair;
+    }
+
     public String getBook() {
         return book;
     }
