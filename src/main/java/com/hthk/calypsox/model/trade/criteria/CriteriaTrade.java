@@ -7,13 +7,14 @@ import java.util.List;
 
 import static com.hthk.fintech.model.data.datacenter.query.EntityTypeEnum.TRADE;
 import static com.hthk.fintech.model.web.http.ActionTypeEnum.COUNT;
+import static com.hthk.fintech.model.web.http.ActionTypeEnum.GET;
 
 /**
  * @Author: Rock CHEN
- * @Date: 2024/1/5 12:09
+ * @Date: 2024/1/2 15:58
  */
-@Criteria(action = COUNT, type = TRADE, appName = ApplicationEnum.CALYPSO)
-public class CriteriaCountTrade extends com.hthk.fintech.model.finance.trade.criteria.CriteriaGetTrade {
+@Criteria(actions = {GET, COUNT}, type = TRADE, appName = ApplicationEnum.CALYPSO)
+public class CriteriaTrade extends com.hthk.fintech.model.finance.trade.criteria.CriteriaTrade {
 
     private String tradeFilter;
 
