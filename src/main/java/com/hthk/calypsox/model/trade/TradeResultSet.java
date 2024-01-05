@@ -10,6 +10,7 @@ import java.util.Optional;
  * @Date: 2023/11/15 20:47
  */
 @JsonPropertyOrder({"count", "tradeList"})
+@Deprecated
 public class TradeResultSet {
 
     private List<ITrade> tradeList;
