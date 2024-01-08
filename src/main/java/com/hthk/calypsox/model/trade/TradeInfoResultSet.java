@@ -1,7 +1,6 @@
 package com.hthk.calypsox.model.trade;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.hthk.fintech.model.trade.TradeInfo;
 
 import java.util.List;
 import java.util.Optional;
