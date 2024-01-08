@@ -1,5 +1,6 @@
 package com.hthk.calypsox.model.trade;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class TradeInfoResultSet {
         this.tradeInfoList = tradeInfoList;
     }
 
+    @JsonIgnore
     public long getCount() {
         return Optional.ofNullable(tradeInfoList).map(t -> t.size()).orElse(0);
     }

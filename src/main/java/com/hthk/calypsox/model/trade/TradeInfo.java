@@ -11,7 +11,8 @@ import java.time.LocalDateTime;
  */
 @JsonPropertyOrder({"book", "tradeId", "externalReference",
         "internalReference", "productType", "productSubType",
-        "productExtType", "trader", "futureUnderlyingCode"})
+        "productExtType", "trader", "futureUnderlyingTickerExchange",
+        "futureUnderlyingBBTickerExchange"})
 public class TradeInfo {
 
     private String book;
@@ -34,14 +35,24 @@ public class TradeInfo {
 
     private String trader;
 
-    private String futureUnderlyingCode;
+    private String futureUnderlyingTickerExchange;
 
-    public String getFutureUnderlyingCode() {
-        return futureUnderlyingCode;
+    private String futureUnderlyingBBTickerExchange;
+
+    public String getFutureUnderlyingBBTickerExchange() {
+        return futureUnderlyingBBTickerExchange;
     }
 
-    public void setFutureUnderlyingCode(String futureUnderlyingCode) {
-        this.futureUnderlyingCode = futureUnderlyingCode;
+    public void setFutureUnderlyingBBTickerExchange(String futureUnderlyingBBTickerExchange) {
+        this.futureUnderlyingBBTickerExchange = futureUnderlyingBBTickerExchange;
+    }
+
+    public String getFutureUnderlyingTickerExchange() {
+        return futureUnderlyingTickerExchange;
+    }
+
+    public void setFutureUnderlyingTickerExchange(String futureUnderlyingTickerExchange) {
+        this.futureUnderlyingTickerExchange = futureUnderlyingTickerExchange;
     }
 
     public String getTradeId() {
