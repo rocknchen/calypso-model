@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  */
 @JsonPropertyOrder({"book", "tradeId", "externalReference",
         "internalReference", "productType", "productSubType",
-        "productExtType", "trader"})
+        "productExtType", "trader", "futureUnderlyingCode"})
 public class TradeInfo {
 
     private String book;
@@ -33,6 +33,16 @@ public class TradeInfo {
     private LocalDate settlementDate;
 
     private String trader;
+
+    private String futureUnderlyingCode;
+
+    public String getFutureUnderlyingCode() {
+        return futureUnderlyingCode;
+    }
+
+    public void setFutureUnderlyingCode(String futureUnderlyingCode) {
+        this.futureUnderlyingCode = futureUnderlyingCode;
+    }
 
     public String getTradeId() {
         return tradeId;
