@@ -9,7 +9,9 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/8 11:31
  */
-@JsonPropertyOrder({"book", "externalReference", "internalReference", "tradeId", "productType", "productSubType", "productExtType", "tradeDateTime", "settlementDate", "trader"})
+@JsonPropertyOrder({"book", "tradeId", "externalReference",
+        "internalReference", "productType", "productSubType",
+        "productExtType", "trader"})
 public class TradeInfo {
 
     private String book;
