@@ -11,10 +11,12 @@ import static com.hthk.fintech.model.web.http.ActionTypeEnum.GET;
 
 /**
  * @Author: Rock CHEN
- * @Date: 2024/1/9 18:47
+ * @Date: 2024/1/9 19:01
  */
-//@Criteria(actions = {GET, COUNT}, type = STATIC_DATA, appName = ApplicationEnum.CALYPSO)
-public class CriteriaFutureContract {
+@Criteria(actions = {GET, COUNT}, type = STATIC_DATA, subType1 = "FUTURE", appName = ApplicationEnum.CALYPSO)
+public class CriteriaFuture {
+
+    private String exchange;
 
     private String name;
 
@@ -23,6 +25,14 @@ public class CriteriaFutureContract {
     private LocalDate expirationStart;
 
     private LocalDate expirationEnd;
+
+    public String getExchange() {
+        return exchange;
+    }
+
+    public void setExchange(String exchange) {
+        this.exchange = exchange;
+    }
 
     public String getName() {
         return name;
