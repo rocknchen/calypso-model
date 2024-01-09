@@ -22,7 +22,7 @@ public class TradeInfoResultSet {
         this.tradeInfoList = tradeInfoList;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public long getCount() {
         return Optional.ofNullable(tradeInfoList).map(t -> t.size()).orElse(0);
     }

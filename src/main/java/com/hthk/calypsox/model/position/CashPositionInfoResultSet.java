@@ -28,7 +28,7 @@ public class CashPositionInfoResultSet {
         this.cashPositionInfoList = cashPositionInfoList;
     }
 
-    @JsonIgnore
+    //    @JsonIgnore
     public long getCount() {
         return Optional.ofNullable(cashPositionInfoList).map(t -> t.size()).orElse(0);
     }
