@@ -1,11 +1,18 @@
 package com.hthk.calypsox.model.staticdata.future.contract;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.time.LocalDate;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2024/1/9 19:00
  */
+@JsonPropertyOrder({"exchange", "name", "currency",
+        "bbTicker", "bbTickerExchange", "ticker",
+        "tickerExchange", "quoteName", "firstTradeDate",
+        "lastTradeDate", "firstDeliveryDate", "lastDeliveryDate",
+        "expirationDate"})
 public class FutureInfo {
 
     private String exchange;
