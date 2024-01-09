@@ -17,6 +17,7 @@ public class CashPositionInfoResultSet {
     }
 
     public CashPositionInfoResultSet(List<CashPositionInfo> cashPositionInfoList) {
+        this.cashPositionInfoList = cashPositionInfoList;
     }
 
     public List<CashPositionInfo> getCashPositionInfoList() {
