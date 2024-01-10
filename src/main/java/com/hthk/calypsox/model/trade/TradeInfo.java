@@ -2,6 +2,7 @@ package com.hthk.calypsox.model.trade;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -11,8 +12,9 @@ import java.time.LocalDateTime;
  */
 @JsonPropertyOrder({"book", "tradeId", "externalReference",
         "internalReference", "productType", "productSubType",
-        "productExtType", "trader", "futureUnderlyingTickerExchange",
-        "futureUnderlyingBBTickerExchange"})
+        "productExtType", "tradeDateTime", "settlementDate",
+        "buySell", "price", "quantity",
+        "trader", "futureUnderlyingTickerExchange", "futureUnderlyingBBTickerExchange"})
 public class TradeInfo {
 
     private String book;
@@ -33,11 +35,33 @@ public class TradeInfo {
 
     private LocalDate settlementDate;
 
+    private String buySell;
+
+    private BigDecimal price;
+
+    private String quantity;
+
     private String trader;
 
     private String futureUnderlyingTickerExchange;
 
     private String futureUnderlyingBBTickerExchange;
+
+    public String getBuySell() {
+        return buySell;
+    }
+
+    public void setBuySell(String buySell) {
+        this.buySell = buySell;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
 
     public String getFutureUnderlyingBBTickerExchange() {
         return futureUnderlyingBBTickerExchange;
@@ -133,5 +157,13 @@ public class TradeInfo {
 
     public void setTradeDateTime(LocalDateTime tradeDateTime) {
         this.tradeDateTime = tradeDateTime;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 }
