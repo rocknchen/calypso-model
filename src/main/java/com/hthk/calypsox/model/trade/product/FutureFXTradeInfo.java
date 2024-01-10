@@ -11,12 +11,11 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/9 20:57
  */
-@FieldOrder({"book", "productType", "productSubType",
-        "tickerExchange", "quoteName", "buySell",
+@FieldOrder({"book", "productType", "productSubType", "tradeId",
+        "tickerExchange", "bbTickerExchange", "quoteName", "buySell",
         "price", "quantity", "tradeDate",
         "tradeDateTime", "settleDate", "firstTradeDate",
-        "firstDeliveryDate", "expirationDate", "futureUnderlyingTickerExchange",
-        "futureUnderlyingBBTickerExchange"})
+        "firstDeliveryDate", "expirationDate"})
 public class FutureFXTradeInfo {
 
     @CSVField(header = "book")
@@ -28,8 +27,14 @@ public class FutureFXTradeInfo {
     @CSVField(header = "productSubType")
     private String productSubType;
 
+    @CSVField(header = "tradeId")
+    private String tradeId;
+
     @CSVField(header = "tickerExchange")
     private String tickerExchange;
+
+    @CSVField(header = "bbTickerExchange")
+    private String bbTickerExchange;
 
     @CSVField(header = "quoteName")
     private String quoteName;
@@ -61,11 +66,21 @@ public class FutureFXTradeInfo {
     @CSVField(header = "expirationDate")
     private LocalDate expirationDate;
 
-    @CSVField(header = "futureUnderlyingTickerExchange")
-    private String futureUnderlyingTickerExchange;
+    public String getTradeId() {
+        return tradeId;
+    }
 
-    @CSVField(header = "futureUnderlyingBBTickerExchange")
-    private String futureUnderlyingBBTickerExchange;
+    public void setTradeId(String tradeId) {
+        this.tradeId = tradeId;
+    }
+
+    public String getBbTickerExchange() {
+        return bbTickerExchange;
+    }
+
+    public void setBbTickerExchange(String bbTickerExchange) {
+        this.bbTickerExchange = bbTickerExchange;
+    }
 
     public LocalDateTime getTradeDateTime() {
         return tradeDateTime;
@@ -179,19 +194,4 @@ public class FutureFXTradeInfo {
         this.expirationDate = expirationDate;
     }
 
-    public String getFutureUnderlyingTickerExchange() {
-        return futureUnderlyingTickerExchange;
-    }
-
-    public void setFutureUnderlyingTickerExchange(String futureUnderlyingTickerExchange) {
-        this.futureUnderlyingTickerExchange = futureUnderlyingTickerExchange;
-    }
-
-    public String getFutureUnderlyingBBTickerExchange() {
-        return futureUnderlyingBBTickerExchange;
-    }
-
-    public void setFutureUnderlyingBBTickerExchange(String futureUnderlyingBBTickerExchange) {
-        this.futureUnderlyingBBTickerExchange = futureUnderlyingBBTickerExchange;
-    }
 }
