@@ -1,6 +1,8 @@
 package com.hthk.calypsox.model.position;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.hthk.fintech.enumration.CSVField;
+import com.hthk.fintech.enumration.FieldOrder;
 
 import java.math.BigDecimal;
 
@@ -10,18 +12,26 @@ import java.math.BigDecimal;
  */
 @JsonPropertyOrder({"book", "currency", "flowType",
         "productType", "settleDate", "amount"})
+@FieldOrder({"book", "currency", "flowType",
+        "productType", "settleDate", "amount"})
 public class CashPositionInfo {
 
+    @CSVField(header = "book")
     private String book;
 
+    @CSVField(header = "currency")
     private String currency;
 
+    @CSVField(header = "flowType")
     private String flowType;
 
+    @CSVField(header = "productType")
     private String productType;
 
+    @CSVField(header = "settleDate")
     private String settleDate;
 
+    @CSVField(header = "amount")
     private BigDecimal amount;
 
     public String getBook() {
