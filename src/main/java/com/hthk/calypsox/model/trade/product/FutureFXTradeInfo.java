@@ -1,39 +1,79 @@
 package com.hthk.calypsox.model.trade.product;
 
+import com.hthk.fintech.enumration.CSVField;
+import com.hthk.fintech.enumration.FieldOrder;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2024/1/9 20:57
  */
+@FieldOrder({"book", "productType", "productSubType",
+        "tickerExchange", "quoteName", "buySell",
+        "price", "quantity", "tradeDate",
+        "tradeDateTime", "settleDate", "firstTradeDate",
+        "firstDeliveryDate", "expirationDate", "futureUnderlyingTickerExchange",
+        "futureUnderlyingBBTickerExchange"})
 public class FutureFXTradeInfo {
 
+    @CSVField(header = "book")
     private String book;
 
+    @CSVField(header = "productType")
     private String productType;
 
+    @CSVField(header = "productSubType")
     private String productSubType;
 
+    @CSVField(header = "tickerExchange")
     private String tickerExchange;
 
+    @CSVField(header = "quoteName")
     private String quoteName;
 
+    @CSVField(header = "buySell")
     private String buySell;
 
+    @CSVField(header = "price")
     private BigDecimal price;
 
+    @CSVField(header = "quantity")
     private BigDecimal quantity;
 
+    @CSVField(header = "tradeDate")
     private LocalDate tradeDate;
 
+    @CSVField(header = "tradeDateTime")
+    private LocalDateTime tradeDateTime;
+
+    @CSVField(header = "settleDate")
     private LocalDate settleDate;
 
+    @CSVField(header = "firstTradeDate")
     private LocalDate firstTradeDate;
 
+    @CSVField(header = "firstDeliveryDate")
     private LocalDate firstDeliveryDate;
 
+    @CSVField(header = "expirationDate")
     private LocalDate expirationDate;
+
+    @CSVField(header = "futureUnderlyingTickerExchange")
+    private String futureUnderlyingTickerExchange;
+
+    @CSVField(header = "futureUnderlyingBBTickerExchange")
+    private String futureUnderlyingBBTickerExchange;
+
+    public LocalDateTime getTradeDateTime() {
+        return tradeDateTime;
+    }
+
+    public void setTradeDateTime(LocalDateTime tradeDateTime) {
+        this.tradeDateTime = tradeDateTime;
+    }
 
     public String getBook() {
         return book;
@@ -137,5 +177,21 @@ public class FutureFXTradeInfo {
 
     public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
+    }
+
+    public String getFutureUnderlyingTickerExchange() {
+        return futureUnderlyingTickerExchange;
+    }
+
+    public void setFutureUnderlyingTickerExchange(String futureUnderlyingTickerExchange) {
+        this.futureUnderlyingTickerExchange = futureUnderlyingTickerExchange;
+    }
+
+    public String getFutureUnderlyingBBTickerExchange() {
+        return futureUnderlyingBBTickerExchange;
+    }
+
+    public void setFutureUnderlyingBBTickerExchange(String futureUnderlyingBBTickerExchange) {
+        this.futureUnderlyingBBTickerExchange = futureUnderlyingBBTickerExchange;
     }
 }
