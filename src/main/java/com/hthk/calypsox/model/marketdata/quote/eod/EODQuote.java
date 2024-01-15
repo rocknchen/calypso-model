@@ -1,5 +1,8 @@
 package com.hthk.calypsox.model.marketdata.quote.eod;
 
+import com.hthk.fintech.enumration.CSVField;
+import com.hthk.fintech.enumration.FieldOrder;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -8,34 +11,53 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2023/11/15 11:56
  */
+@FieldOrder({"date", "quoteName", "quoteType",
+        "bid", "ask", "open",
+        "close", "high", "low",
+        "last", "enteredDate", "enteredUser",
+        "knownDate", "sourceName"})
 public class EODQuote {
 
+    @CSVField(header = "date")
     private LocalDate date;
 
+    @CSVField(header = "quoteName")
     private String quoteName;
 
+    @CSVField(header = "quoteType")
     private String quoteType;
 
+    @CSVField(header = "bid")
     private BigDecimal bid;
 
+    @CSVField(header = "ask")
     private BigDecimal ask;
 
+    @CSVField(header = "open")
     private BigDecimal open;
 
+    @CSVField(header = "close")
     private BigDecimal close;
 
+    @CSVField(header = "high")
     private BigDecimal high;
 
+    @CSVField(header = "low")
     private BigDecimal low;
 
+    @CSVField(header = "last")
     private BigDecimal last;
 
+    @CSVField(header = "enteredDate")
     private LocalDateTime enteredDate;
 
+    @CSVField(header = "enteredUser")
     private String enteredUser;
 
+    @CSVField(header = "knownDate")
     private LocalDate knownDate;
 
+    @CSVField(header = "sourceName")
     private String sourceName;
 
     public String getQuoteType() {
