@@ -1,6 +1,8 @@
 package com.hthk.calypsox.model.trade;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.hthk.fintech.enumration.CSVField;
+import com.hthk.fintech.enumration.FieldOrder;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -14,7 +16,8 @@ import java.time.LocalDateTime;
         "internalReference", "productType", "productSubType",
         "productExtType", "tradeDateTime", "settlementDate",
         "buySell", "price", "quantity",
-        "trader", "futureUnderlyingTickerExchange", "futureUnderlyingBBTickerExchange"})
+        "tradeStatus", "trader", "enteredUser",
+        "enteredDateTime", "futureUnderlyingTickerExchange", "futureUnderlyingBBTickerExchange"})
 public class TradeInfo {
 
     private String book;
@@ -45,9 +48,29 @@ public class TradeInfo {
 
     private String trader;
 
+    private String enteredUser;
+
+    private LocalDateTime enteredDateTime;
+
     private String futureUnderlyingTickerExchange;
 
     private String futureUnderlyingBBTickerExchange;
+
+    public String getEnteredUser() {
+        return enteredUser;
+    }
+
+    public void setEnteredUser(String enteredUser) {
+        this.enteredUser = enteredUser;
+    }
+
+    public LocalDateTime getEnteredDateTime() {
+        return enteredDateTime;
+    }
+
+    public void setEnteredDateTime(LocalDateTime enteredDateTime) {
+        this.enteredDateTime = enteredDateTime;
+    }
 
     public String getTradeStatus() {
         return tradeStatus;
