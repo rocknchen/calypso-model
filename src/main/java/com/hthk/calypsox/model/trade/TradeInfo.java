@@ -41,11 +41,21 @@ public class TradeInfo {
 
     private String quantity;
 
+    private String tradeStatus;
+
     private String trader;
 
     private String futureUnderlyingTickerExchange;
 
     private String futureUnderlyingBBTickerExchange;
+
+    public String getTradeStatus() {
+        return tradeStatus;
+    }
+
+    public void setTradeStatus(String tradeStatus) {
+        this.tradeStatus = tradeStatus;
+    }
 
     public String getBuySell() {
         return buySell;
