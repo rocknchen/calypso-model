@@ -11,11 +11,12 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/9 20:57
  */
-@FieldOrder({"book", "productType", "productSubType", "tradeId",
-        "tickerExchange", "bbTickerExchange", "quoteName", "buySell",
-        "price", "quantity", "tradeDate",
-        "tradeDateTime", "settleDate", "firstTradeDate",
-        "firstDeliveryDate", "expirationDate"})
+@FieldOrder({"book", "productType", "productSubType",
+        "tradeId", "externalReference", "internalReference",
+        "tickerExchange", "bbTickerExchange", "quoteName",
+        "buySell", "price", "quantity",
+        "tradeDate", "tradeDateTime", "settleDate",
+        "firstTradeDate", "firstDeliveryDate", "expirationDate"})
 public class FutureFXTradeInfo {
 
     @CSVField(header = "book")
@@ -29,6 +30,12 @@ public class FutureFXTradeInfo {
 
     @CSVField(header = "tradeId")
     private String tradeId;
+
+    @CSVField(header = "externalReference")
+    private String externalReference;
+
+    @CSVField(header = "internalReference")
+    private String internalReference;
 
     @CSVField(header = "tickerExchange")
     private String tickerExchange;
@@ -194,4 +201,19 @@ public class FutureFXTradeInfo {
         this.expirationDate = expirationDate;
     }
 
+    public String getExternalReference() {
+        return externalReference;
+    }
+
+    public void setExternalReference(String externalReference) {
+        this.externalReference = externalReference;
+    }
+
+    public String getInternalReference() {
+        return internalReference;
+    }
+
+    public void setInternalReference(String internalReference) {
+        this.internalReference = internalReference;
+    }
 }
