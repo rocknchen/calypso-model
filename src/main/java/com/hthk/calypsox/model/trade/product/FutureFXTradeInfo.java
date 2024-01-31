@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @FieldOrder({"book", "counterParty", "productType", "productSubType",
         "tradeId", "externalReference", "internalReference",
         "tickerExchange", "bbTickerExchange", "quoteName",
-        "buySell", "price", "quantity",
+        "buySell", "price", "quantity", "tradeStatus",
         "tradeDate", "tradeDateTime", "settleDate",
         "firstTradeDate", "firstDeliveryDate", "expirationDate"})
 public class FutureFXTradeInfo {
@@ -58,6 +58,9 @@ public class FutureFXTradeInfo {
     @CSVField(header = "quantity")
     private BigDecimal quantity;
 
+    @CSVField(header = "tradeStatus")
+    private String tradeStatus;
+
     @CSVField(header = "tradeDate")
     private LocalDate tradeDate;
 
@@ -75,6 +78,14 @@ public class FutureFXTradeInfo {
 
     @CSVField(header = "expirationDate")
     private LocalDate expirationDate;
+
+    public String getTradeStatus() {
+        return tradeStatus;
+    }
+
+    public void setTradeStatus(String tradeStatus) {
+        this.tradeStatus = tradeStatus;
+    }
 
     public String getCounterParty() {
         return counterParty;
