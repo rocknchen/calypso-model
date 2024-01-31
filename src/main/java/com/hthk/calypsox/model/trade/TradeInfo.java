@@ -12,15 +12,18 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/8 11:31
  */
-@JsonPropertyOrder({"book", "tradeId", "externalReference",
-        "internalReference", "productType", "productSubType",
-        "productExtType", "tradeDateTime", "settlementDate",
-        "buySell", "price", "quantity",
-        "tradeStatus", "trader", "enteredUser",
-        "enteredDateTime", "futureUnderlyingTickerExchange", "futureUnderlyingBBTickerExchange"})
+@JsonPropertyOrder({"book", "counterParty", "tradeId",
+        "externalReference", "internalReference", "productType",
+        "productSubType", "productExtType", "tradeDateTime",
+        "settlementDate", "buySell", "price",
+        "quantity", "tradeStatus", "trader",
+        "enteredUser", "enteredDateTime", "futureUnderlyingTickerExchange",
+        "futureUnderlyingBBTickerExchange"})
 public class TradeInfo {
 
     private String book;
+
+    private String counterParty;
 
     private String tradeId;
 
@@ -55,6 +58,14 @@ public class TradeInfo {
     private String futureUnderlyingTickerExchange;
 
     private String futureUnderlyingBBTickerExchange;
+
+    public String getCounterParty() {
+        return counterParty;
+    }
+
+    public void setCounterParty(String counterParty) {
+        this.counterParty = counterParty;
+    }
 
     public String getEnteredUser() {
         return enteredUser;

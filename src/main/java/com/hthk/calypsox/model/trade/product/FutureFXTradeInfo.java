@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  * @Author: Rock CHEN
  * @Date: 2024/1/9 20:57
  */
-@FieldOrder({"book", "productType", "productSubType",
+@FieldOrder({"book", "counterParty", "productType", "productSubType",
         "tradeId", "externalReference", "internalReference",
         "tickerExchange", "bbTickerExchange", "quoteName",
         "buySell", "price", "quantity",
@@ -21,6 +21,9 @@ public class FutureFXTradeInfo {
 
     @CSVField(header = "book")
     private String book;
+
+    @CSVField(header = "counterParty")
+    private String counterParty;
 
     @CSVField(header = "productType")
     private String productType;
@@ -72,6 +75,14 @@ public class FutureFXTradeInfo {
 
     @CSVField(header = "expirationDate")
     private LocalDate expirationDate;
+
+    public String getCounterParty() {
+        return counterParty;
+    }
+
+    public void setCounterParty(String counterParty) {
+        this.counterParty = counterParty;
+    }
 
     public String getTradeId() {
         return tradeId;
