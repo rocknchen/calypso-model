@@ -20,6 +20,26 @@ public class CriteriaTrade extends com.hthk.fintech.model.finance.trade.criteria
 
     private List<String> bookList;
 
+    private List<String> bookBlackList;
+
+    private List<String> tradeStatusBlackList;
+
+    public List<String> getTradeStatusBlackList() {
+        return tradeStatusBlackList;
+    }
+
+    public void setTradeStatusBlackList(List<String> tradeStatusBlackList) {
+        this.tradeStatusBlackList = tradeStatusBlackList;
+    }
+
+    public List<String> getBookBlackList() {
+        return bookBlackList;
+    }
+
+    public void setBookBlackList(List<String> bookBlackList) {
+        this.bookBlackList = bookBlackList;
+    }
+
     public List<String> getBookList() {
         return bookList;
     }
