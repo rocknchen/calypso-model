@@ -3,6 +3,8 @@ package com.hthk.calypsox.model.trade.criteria;
 import com.hthk.fintech.model.common.Criteria;
 import com.hthk.fintech.model.software.app.ApplicationEnum;
 
+import java.util.List;
+
 import static com.hthk.fintech.model.data.datacenter.query.EntityTypeEnum.TRADE;
 import static com.hthk.fintech.model.web.http.ActionTypeEnum.*;
 
@@ -16,6 +18,8 @@ public class CriteriaCopyTrade {
     private String tradeFilter;
 
     private String targetBook;
+
+    private List<Long> tradeIdBlackList;
 
     public String getTradeFilter() {
         return tradeFilter;
@@ -33,4 +37,11 @@ public class CriteriaCopyTrade {
         this.targetBook = targetBook;
     }
 
+    public List<Long> getTradeIdBlackList() {
+        return tradeIdBlackList;
+    }
+
+    public void setTradeIdBlackList(List<Long> tradeIdBlackList) {
+        this.tradeIdBlackList = tradeIdBlackList;
+    }
 }
