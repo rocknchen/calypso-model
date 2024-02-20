@@ -1,6 +1,7 @@
 package com.hthk.calypsox.model.staticdata;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.hthk.fintech.model.staticdata.BookInfo;
 
 import java.util.List;
 import java.util.Optional;
