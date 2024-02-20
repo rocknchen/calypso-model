@@ -17,9 +17,19 @@ public class CriteriaBook {
 
     private List<String> namePreList;
 
-    private int idStart;
+    private Integer idStart;
 
-    private int idEnd;
+    private Integer idEnd;
+
+    private String testStatus;
+
+    public String getTestStatus() {
+        return testStatus;
+    }
+
+    public void setTestStatus(String testStatus) {
+        this.testStatus = testStatus;
+    }
 
     public List<String> getNamePreList() {
         return namePreList;
@@ -29,19 +39,19 @@ public class CriteriaBook {
         this.namePreList = namePreList;
     }
 
-    public int getIdStart() {
+    public Integer getIdStart() {
         return idStart;
     }
 
-    public void setIdStart(int idStart) {
+    public void setIdStart(Integer idStart) {
         this.idStart = idStart;
     }
 
-    public int getIdEnd() {
+    public Integer getIdEnd() {
         return idEnd;
     }
 
-    public void setIdEnd(int idEnd) {
+    public void setIdEnd(Integer idEnd) {
         this.idEnd = idEnd;
     }
 }
