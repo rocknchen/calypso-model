@@ -18,6 +18,16 @@ public class CriteriaCashPosition {
 
     private List<String> bookList;
 
+    private String tradeFilter;
+
+    public String getTradeFilter() {
+        return tradeFilter;
+    }
+
+    public void setTradeFilter(String tradeFilter) {
+        this.tradeFilter = tradeFilter;
+    }
+
     public List<String> getBookList() {
         return bookList;
     }
