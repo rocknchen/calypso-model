@@ -21,6 +21,16 @@ public class CriteriaBookAmend {
 
     private String bookProduct;
 
+    private String testStatus;
+
+    public String getTestStatus() {
+        return testStatus;
+    }
+
+    public void setTestStatus(String testStatus) {
+        this.testStatus = testStatus;
+    }
+
     public String getName() {
         return name;
     }
