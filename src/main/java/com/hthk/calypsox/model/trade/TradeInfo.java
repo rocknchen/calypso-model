@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
         "settlementDate", "buySell", "price",
         "quantity", "tradeStatus", "trader",
         "enteredUser", "enteredDateTime", "futureUnderlyingTickerExchange",
-        "futureUnderlyingBBTickerExchange"})
+        "futureUnderlyingBBTickerExchange", "longNote1"})
 public class TradeInfo {
 
     private String book;
@@ -58,6 +58,16 @@ public class TradeInfo {
     private String futureUnderlyingTickerExchange;
 
     private String futureUnderlyingBBTickerExchange;
+
+    private String longNote1;
+
+    public String getLongNote1() {
+        return longNote1;
+    }
+
+    public void setLongNote1(String longNote1) {
+        this.longNote1 = longNote1;
+    }
 
     public String getCounterParty() {
         return counterParty;
