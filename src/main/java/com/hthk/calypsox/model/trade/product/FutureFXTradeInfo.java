@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
         "tradeId", "externalReference", "internalReference",
         "tickerExchange", "bbTickerExchange", "quoteName",
         "buySell", "price", "quantity", "tradeStatus",
-        "tradeDate", "tradeDateTime", "settleDate",
+        "enteredDateTime", "tradeDate", "tradeDateTime", "settleDate",
         "firstTradeDate", "firstDeliveryDate", "expirationDate"})
 public class FutureFXTradeInfo {
 
@@ -61,6 +61,9 @@ public class FutureFXTradeInfo {
     @CSVField(header = "tradeStatus")
     private String tradeStatus;
 
+    @CSVField(header = "enteredDateTime")
+    private LocalDateTime enteredDateTime;
+
     @CSVField(header = "tradeDate")
     private LocalDate tradeDate;
 
@@ -78,6 +81,14 @@ public class FutureFXTradeInfo {
 
     @CSVField(header = "expirationDate")
     private LocalDate expirationDate;
+
+    public LocalDateTime getEnteredDateTime() {
+        return enteredDateTime;
+    }
+
+    public void setEnteredDateTime(LocalDateTime enteredDateTime) {
+        this.enteredDateTime = enteredDateTime;
+    }
 
     public String getTradeStatus() {
         return tradeStatus;
