@@ -11,9 +11,9 @@ import java.math.BigDecimal;
  * @Date: 2024/1/8 17:10
  */
 @JsonPropertyOrder({"book", "currency", "flowType",
-        "productType", "settleDate", "amount"})
+        "productType", "settleDate", "positionAgg", "amount"})
 @FieldOrder({"book", "currency", "flowType",
-        "productType", "settleDate", "amount"})
+        "productType", "settleDate", "positionAgg", "amount"})
 public class CashPositionInfo {
 
     @CSVField(header = "book")
@@ -31,8 +31,19 @@ public class CashPositionInfo {
     @CSVField(header = "settleDate")
     private String settleDate;
 
+    @CSVField(header = "positionAgg")
+    private String positionAgg;
+
     @CSVField(header = "amount")
     private BigDecimal amount;
+
+    public String getPositionAgg() {
+        return positionAgg;
+    }
+
+    public void setPositionAgg(String positionAgg) {
+        this.positionAgg = positionAgg;
+    }
 
     public String getBook() {
         return book;
