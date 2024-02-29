@@ -23,6 +23,26 @@ public class CriteriaBook {
 
     private String testStatus;
 
+    private List<String> legalEntityList;
+
+    private List<String> companyShortNameList;
+
+    public List<String> getLegalEntityList() {
+        return legalEntityList;
+    }
+
+    public void setLegalEntityList(List<String> legalEntityList) {
+        this.legalEntityList = legalEntityList;
+    }
+
+    public List<String> getCompanyShortNameList() {
+        return companyShortNameList;
+    }
+
+    public void setCompanyShortNameList(List<String> companyShortNameList) {
+        this.companyShortNameList = companyShortNameList;
+    }
+
     public String getTestStatus() {
         return testStatus;
     }
