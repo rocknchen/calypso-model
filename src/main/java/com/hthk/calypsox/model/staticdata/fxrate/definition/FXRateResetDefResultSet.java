@@ -12,12 +12,12 @@ import java.util.Optional;
 @JsonPropertyOrder({"count", "list"})
 public class FXRateResetDefResultSet {
 
-    private List<FXRateResetDefinition> list;
+    private List<FXRateResetDefinitionInfo> list;
 
     public FXRateResetDefResultSet() {
     }
 
-    public FXRateResetDefResultSet(List<FXRateResetDefinition> list) {
+    public FXRateResetDefResultSet(List<FXRateResetDefinitionInfo> list) {
         this.list = list;
     }
 
@@ -25,7 +25,7 @@ public class FXRateResetDefResultSet {
         return Optional.ofNullable(list).map(t -> t.size()).orElse(0);
     }
 
-    public List<FXRateResetDefinition> getList() {
+    public List<FXRateResetDefinitionInfo> getList() {
         return list;
     }
 

@@ -1,12 +1,23 @@
 package com.hthk.calypsox.model.staticdata.fxrate.definition;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.hthk.fintech.enumration.FieldOrder;
+
 import java.util.List;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2024/3/5 16:10
  */
-public class FXRateResetDefinition {
+@FieldOrder({"id", "name", "prim",
+        "sec", "rateSource", "resetDays",
+        "preferred", "timeZone", "resetHour",
+        "resetHolidays"})
+@JsonPropertyOrder({"id", "name", "prim",
+        "sec", "rateSource", "resetDays",
+        "preferred", "timeZone", "resetHour",
+        "resetHolidays"})
+public class FXRateResetDefinitionInfo {
 
     private String id;
 
