@@ -1,6 +1,7 @@
 package com.hthk.calypsox.model.staticdata.fxrate.definition;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.hthk.fintech.enumration.CSVField;
 import com.hthk.fintech.enumration.FieldOrder;
 
 import java.util.List;
@@ -19,24 +20,34 @@ import java.util.List;
         "resetHolidays"})
 public class FXRateResetDefinitionInfo {
 
+    @CSVField(header = "id")
     private String id;
 
+    @CSVField(header = "name")
     private String name;
 
+    @CSVField(header = "prim")
     private String prim;
 
+    @CSVField(header = "sec")
     private String sec;
 
+    @CSVField(header = "rateSource")
     private String rateSource;
 
+    @CSVField(header = "resetDays")
     private Integer resetDays;
 
+    @CSVField(header = "preferred")
     private boolean preferred;
 
+    @CSVField(header = "timeZone")
     private String timeZone;
 
+    @CSVField(header = "resetHour")
     private String resetHour;
 
+    @CSVField(header = "resetHolidays")
     private List<String> resetHolidays;
 
     public String getId() {
