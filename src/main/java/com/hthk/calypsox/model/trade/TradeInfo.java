@@ -18,7 +18,8 @@ import java.time.LocalDateTime;
         "settlementDate", "buySell", "price",
         "quantity", "tradeStatus", "trader",
         "enteredUser", "enteredDateTime", "futureUnderlyingTickerExchange",
-        "futureUnderlyingBBTickerExchange", "longNote1"})
+        "futureUnderlyingBBTickerExchange", "longNote1",
+        "rateIndex", "payLegCurrency", "recLegCurrency"})
 public class TradeInfo {
 
     private String book;
@@ -60,6 +61,36 @@ public class TradeInfo {
     private String futureUnderlyingBBTickerExchange;
 
     private String longNote1;
+
+    private String rateIndex;
+
+    private String payLegCurrency;
+
+    private String recLegCurrency;
+
+    public String getPayLegCurrency() {
+        return payLegCurrency;
+    }
+
+    public void setPayLegCurrency(String payLegCurrency) {
+        this.payLegCurrency = payLegCurrency;
+    }
+
+    public String getRecLegCurrency() {
+        return recLegCurrency;
+    }
+
+    public void setRecLegCurrency(String recLegCurrency) {
+        this.recLegCurrency = recLegCurrency;
+    }
+
+    public String getRateIndex() {
+        return rateIndex;
+    }
+
+    public void setRateIndex(String rateIndex) {
+        this.rateIndex = rateIndex;
+    }
 
     public String getLongNote1() {
         return longNote1;
