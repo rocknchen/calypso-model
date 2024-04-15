@@ -1,5 +1,8 @@
 package com.hthk.calypsox.model.person;
 
+import com.hthk.fintech.enumration.CSVField;
+import com.hthk.fintech.enumration.FieldOrder;
+
 import java.util.List;
 
 /**
