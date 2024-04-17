@@ -1,14 +1,12 @@
 package com.hthk.calypsox.model.person;
 
-import com.hthk.fintech.enumration.CSVField;
-import com.hthk.fintech.enumration.FieldOrder;
-
 import java.util.List;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2024/4/15 15:40
  */
+
 public class UserInfo {
 
     private String userName;
