@@ -8,7 +8,7 @@ import com.hthk.fintech.enumration.FieldOrder;
  * @Date: 2024/4/17 15:22
  */
 @FieldOrder({"legalEntity", "department", "tradingDesk", "businessType", "tradingType",
-        "bookName", "accessType", "userName"})
+        "bookName", "accessType", "userName", "id", "desc"})
 public class BookAccessALl {
 
     @CSVField(header = "Legal Entity")
@@ -30,6 +30,17 @@ public class BookAccessALl {
 
     @CSVField(header = "Access Type")
     private String accessType;
+
+    @CSVField(header = "Description")
+    private String desc;
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 
     public String getLegalEntity() {
         return legalEntity;
@@ -73,6 +84,17 @@ public class BookAccessALl {
 
     @CSVField(header = "User")
     private String userName;
+
+    @CSVField(header = "id")
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getBookName() {
         return bookName;
