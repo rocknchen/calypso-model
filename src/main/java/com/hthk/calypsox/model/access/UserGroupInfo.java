@@ -1,14 +1,30 @@
 package com.hthk.calypsox.model.access;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.util.List;
 
 /**
  * @Author: Rock CHEN
  * @Date: 2024/4/24 11:15
  */
+@JsonPropertyOrder({"name", "bookReadWriteList", "bookReadOnlyList",
+        "bookAttributesReadWriteList", "bookAttributesReadOnlyList",
+        "allBookReadWriteList", "allBookReadOnlyList"
+})
 public class UserGroupInfo {
 
     private String name;
+
+    /**
+     * Summary
+     */
+    private List<String> allBookReadWriteList;
+
+    /**
+     * Summary
+     */
+    private List<String> allBookReadOnlyList;
 
     private List<String> bookReadWriteList;
 
@@ -17,6 +33,22 @@ public class UserGroupInfo {
     private List<String> bookAttributesReadWriteList;
 
     private List<String> bookAttributesReadOnlyList;
+
+    public List<String> getAllBookReadWriteList() {
+        return allBookReadWriteList;
+    }
+
+    public void setAllBookReadWriteList(List<String> allBookReadWriteList) {
+        this.allBookReadWriteList = allBookReadWriteList;
+    }
+
+    public List<String> getAllBookReadOnlyList() {
+        return allBookReadOnlyList;
+    }
+
+    public void setAllBookReadOnlyList(List<String> allBookReadOnlyList) {
+        this.allBookReadOnlyList = allBookReadOnlyList;
+    }
 
     public String getName() {
         return name;
