@@ -16,6 +16,14 @@ public class UserGroupInfo {
 
     private String name;
 
+    private List<String> bookReadWriteList;
+
+    private List<String> bookReadOnlyList;
+
+    private List<String> bookAttributesReadWriteList;
+
+    private List<String> bookAttributesReadOnlyList;
+
     /**
      * Summary
      */
@@ -25,14 +33,6 @@ public class UserGroupInfo {
      * Summary
      */
     private List<String> allBookReadOnlyList;
-
-    private List<String> bookReadWriteList;
-
-    private List<String> bookReadOnlyList;
-
-    private List<String> bookAttributesReadWriteList;
-
-    private List<String> bookAttributesReadOnlyList;
 
     public List<String> getAllBookReadWriteList() {
         return allBookReadWriteList;
