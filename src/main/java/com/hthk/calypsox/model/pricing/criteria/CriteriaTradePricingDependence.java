@@ -19,7 +19,17 @@ public class CriteriaTradePricingDependence {
 
     private String valuationTime;
 
+    private String pricingEnv;
+
     private String strategy;
+
+    public String getPricingEnv() {
+        return pricingEnv;
+    }
+
+    public void setPricingEnv(String pricingEnv) {
+        this.pricingEnv = pricingEnv;
+    }
 
     public List<String> getTradeFilterList() {
         return tradeFilterList;
