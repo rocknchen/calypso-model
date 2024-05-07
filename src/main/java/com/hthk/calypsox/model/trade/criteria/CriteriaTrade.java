@@ -3,6 +3,7 @@ package com.hthk.calypsox.model.trade.criteria;
 import com.hthk.fintech.model.common.Criteria;
 import com.hthk.fintech.model.software.app.ApplicationEnum;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static com.hthk.fintech.model.data.datacenter.query.EntityTypeEnum.TRADE;
@@ -25,6 +26,16 @@ public class CriteriaTrade extends com.hthk.fintech.model.finance.trade.criteria
     private List<String> tradeStatusBlackList;
 
     private List<String> productTypeList;
+
+    private List<LocalDate> tradeDateList;
+
+    public List<LocalDate> getTradeDateList() {
+        return tradeDateList;
+    }
+
+    public void setTradeDateList(List<LocalDate> tradeDateList) {
+        this.tradeDateList = tradeDateList;
+    }
 
     public List<String> getProductTypeList() {
         return productTypeList;
